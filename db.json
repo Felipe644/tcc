@@ -1,0 +1,25 @@
+{
+  "marcas": [],
+  "especies": [
+    {
+      "nome": "gymygku",
+      "id": 1
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "12312",
+      "codigo": "2312",
+      "codbarra": "123123",
+      "valor": "2211",
+      "categoria": "3212",
+      "quant": "2312",
+      "medida": "2131",
+      "peso": "2312",
+      "espe": "312312",
+      "status": "321312",
+      "des": "21312",
+      "id": 1
+    }
+  ]
+}
