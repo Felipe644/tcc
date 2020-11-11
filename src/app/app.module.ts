@@ -19,6 +19,7 @@ import { DemandListComponent } from './pages/demand-list/demand-list.component';
 import { CardModule } from 'primeng/card';
 import { CardComponent } from './components/card/card.component';
 import { TitleHeaderComponent } from './components/title-header/title-header.component';
+import { HeaderComponent } from './components/header/header.component';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
 // import { NovoProdutoComponent } from './components/template/novo-produto/novo-produto.component';
@@ -26,22 +27,14 @@ import { TitleHeaderComponent } from './components/title-header/title-header.com
 // import { CadastrarMarcaComponent } from './components/template/cadastrar-marca/cadastrar-marca.component';
 // import { CadastrarEspecieComponent } from './components/template/cadastrar-especie/cadastrar-especie.component';
 
-const routes: Routes = [
-  // { path: 'produtos', component: MeusProdutosComponent },
-  // { path: 'produtos/novo', component: NovoProdutoComponent },
-  // { path: 'pedidos', component: MeusPedidosComponent },
-  // { path: 'marcas', component: CadastrarMarcaComponent },
-  // { path: 'especies', component: CadastrarEspecieComponent }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
     MessageComponent,
     DemandListComponent,
     CardComponent,
-    TitleHeaderComponent
-    // HeaderComponent,
+    TitleHeaderComponent,
+    HeaderComponent,
     // MeusPedidosComponent,
     // NovoProdutoComponent,
     // MeusProdutosComponent,
@@ -60,8 +53,7 @@ const routes: Routes = [
     CardModule,
     InputTextareaModule,
     DropdownModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

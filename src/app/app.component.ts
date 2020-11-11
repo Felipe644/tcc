@@ -10,5 +10,3 @@ export class AppComponent {
   title = 'test-app';
 
 }
-
-

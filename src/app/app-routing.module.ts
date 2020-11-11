@@ -1,10 +1,39 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DemandListComponent } from './pages/demand-list/demand-list.component';
-
+import {HeaderComponent} from "./components/header/header.component";
 
 const routes: Routes = [
-  { path: 'demand-list', component: DemandListComponent },
+
+  {
+    path: '',
+    component: HeaderComponent
+  },
+  { 
+    path: 'demand-list', 
+    component: DemandListComponent 
+  },
+
+  // {
+  //   path: 'produtos',
+  //   component: MeusProdutosComponent
+  // },
+  // {
+  //   path: 'produtos/novo',
+  //   component: NovoProdutoComponent
+  // },
+  // {
+  //   path: 'pedidos',
+  //   component: MeusPedidosComponent
+  // },
+  // {
+  //   path: 'marcas',
+  //   component: CadastrarMarcaComponent
+  // },
+  // {
+  //   path: 'especies',
+  //   component: CadastrarEspecieComponent
+  // }
 
 ];
 
