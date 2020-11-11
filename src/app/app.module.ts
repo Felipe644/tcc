@@ -4,12 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-
-import { MarcaService } from './marca.service';
-import { EspecieService } from './especie.service';
-import { ProdutoService } from './shared/service/produto.service';
-
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -19,6 +13,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AppRoutingModule } from './app-routing.module';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 
+import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
@@ -60,11 +55,7 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [
-    MarcaService,
-    EspecieService,
-    ProdutoService
-  ],
+  providers: [],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
