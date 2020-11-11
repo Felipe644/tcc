@@ -5,12 +5,12 @@ import {HeaderComponent} from "./components/header/header.component";
 
 const routes: Routes = [
 
-  {
-    path: '',
-    component: HeaderComponent
-  },
+  // {
+  //   path: '',
+  //   component: HeaderComponent
+  // },
   { 
-    path: 'demand-list', 
+    path: '', 
     component: DemandListComponent 
   },
 
