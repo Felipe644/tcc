@@ -15,6 +15,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
+import { HeaderComponent } from './components/header/header.component';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
 // import { NovoProdutoComponent } from './components/template/novo-produto/novo-produto.component';
@@ -22,19 +23,11 @@ import { MessageComponent } from './message/message.component';
 // import { CadastrarMarcaComponent } from './components/template/cadastrar-marca/cadastrar-marca.component';
 // import { CadastrarEspecieComponent } from './components/template/cadastrar-especie/cadastrar-especie.component';
 
-const routes: Routes = [
-  // { path: 'produtos', component: MeusProdutosComponent },
-  // { path: 'produtos/novo', component: NovoProdutoComponent },
-  // { path: 'pedidos', component: MeusPedidosComponent },
-  // { path: 'marcas', component: CadastrarMarcaComponent },
-  // { path: 'especies', component: CadastrarEspecieComponent }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
     MessageComponent,
-    // HeaderComponent,
+    HeaderComponent,
     // MeusPedidosComponent,
     // NovoProdutoComponent,
     // MeusProdutosComponent,
@@ -52,8 +45,7 @@ const routes: Routes = [
     TooltipModule,
     InputTextareaModule,
     DropdownModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
