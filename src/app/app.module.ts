@@ -15,6 +15,10 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
+import { DemandListComponent } from './pages/demand-list/demand-list.component';
+import { CardModule } from 'primeng/card';
+import { CardComponent } from './components/card/card.component';
+import { TitleHeaderComponent } from './components/title-header/title-header.component';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
 // import { NovoProdutoComponent } from './components/template/novo-produto/novo-produto.component';
@@ -34,6 +38,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     MessageComponent,
+    DemandListComponent,
+    CardComponent,
+    TitleHeaderComponent
     // HeaderComponent,
     // MeusPedidosComponent,
     // NovoProdutoComponent,
@@ -50,6 +57,7 @@ const routes: Routes = [
     ButtonModule,
     ToolbarModule,
     TooltipModule,
+    CardModule,
     InputTextareaModule,
     DropdownModule,
     HttpClientModule,

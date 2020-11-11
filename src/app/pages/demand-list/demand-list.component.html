@@ -1,0 +1,43 @@
+
+
+<app-card [titleCard]="'Pedidos'">
+    <p-table [value]="[0]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 3rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th>Nº PEDIDO</th>
+                <th>CLIENTE</th>
+                <th>STATUS DO PEDIDO</th>
+                <th>VALOR TOTAL</th>
+                <th>ABRIR PEDIDO</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="false"></p-tableCheckbox>
+                </td>
+                <td>00001</td>
+                <td>José Pericles</td>
+                <td>Aguardando Confirmação</td>
+                <td>R$ 89,90</td>
+                <td>
+                    <i class="pi pi-external-link" style="font-size: 2rem"></i>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <div style="display: flex; justify-content: flex-end; align-content: space-around;" class="buttons-list">
+        <div>
+            <p-button label="PEDIDO ENVIADO" icon="pi pi-envelope"  class="p-button-secondary" iconPos="right"></p-button>
+        </div>
+        <div>
+            <p-button label="CANCELAR O PEDIDO" icon="pi pi-times"  class="p-button-secondary" iconPos="right"></p-button>
+        </div>
+        <div>
+            <p-button label="FINALIZAR O PEDIDO" icon="pi pi-check"  class="p-button-secondary" iconPos="right"></p-button>
+        </div>
+    </div>
+</app-card>
