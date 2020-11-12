@@ -20,12 +20,12 @@ import { CardModule } from 'primeng/card';
 import { CardComponent } from './components/card/card.component';
 import { TitleHeaderComponent } from './components/title-header/title-header.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
 // import { NovoProdutoComponent } from './components/template/novo-produto/novo-produto.component';
 // import { MeusProdutosComponent } from './components/template/meus-produtos/meus-produtos.component';
-// import { CadastrarMarcaComponent } from './components/template/cadastrar-marca/cadastrar-marca.component';
-// import { CadastrarEspecieComponent } from './components/template/cadastrar-especie/cadastrar-especie.component';
+
 
 @NgModule({
   declarations: [
@@ -35,11 +35,11 @@ import { HeaderComponent } from './components/header/header.component';
     CardComponent,
     TitleHeaderComponent,
     HeaderComponent,
+    CadastrarEspecieComponent,
     // MeusPedidosComponent,
     // NovoProdutoComponent,
     // MeusProdutosComponent,
-    // CadastrarEspecieComponent,
-    // CadastrarMarcaComponent
+
   ],
   imports: [
     FormsModule,

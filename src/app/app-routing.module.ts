@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DemandListComponent } from './pages/demand-list/demand-list.component';
 import {HeaderComponent} from "./components/header/header.component";
+import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
 
 const routes: Routes = [
 
@@ -30,10 +31,10 @@ const routes: Routes = [
   //   path: 'marcas',
   //   component: CadastrarMarcaComponent
   // },
-  // {
-  //   path: 'especies',
-  //   component: CadastrarEspecieComponent
-  // }
+   {
+     path: 'especies',
+     component: CadastrarEspecieComponent
+   }
 
 ];
 
