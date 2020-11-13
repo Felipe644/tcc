@@ -16,47 +16,48 @@ export class HeaderComponent implements OnInit {
     this.items = [
       {
         label: 'Início',
-        icon: 'pi pi-pw pi-file',
+        icon: 'pi pi-home',
         routerLink: '/'
       },
       {
         label: 'Minha Loja',
-        icon: 'pi pi-pw pi-file'
+        icon: 'pi pi-shopping-cart'
       },
       {
         label: 'Produtos',
-        icon: 'pi pi-pw pi-file',
+        icon: 'pi pi-inbox',
         items: [
           {
             label: 'Listar produtos',
-            icon: 'pi pi-pw pi-file'
+            icon: 'pi pi-minus'
           },
           {
             label: 'Novo produto',
-            icon: 'pi pi-pw pi-file'
+            icon: 'pi pi-minus'
           }
         ]
       },
       {
         label: 'Marcas',
-        icon: 'pi pi-pw pi-file'
+        icon: 'pi pi-minus',
+        routerLink: '/marcas'
       },
       {
         label: 'Espécies',
-        icon: 'pi pi-pw pi-file',
+        icon: 'pi pi-minus',
         routerLink: '/especies'
       },
       {
         label: 'Relatórios',
-        icon: 'pi pi-pw pi-file'
+        icon: 'pi pi-chart-bar'
       },
       {
         label: 'Configurações',
-        icon: 'pi pi-pw pi-file'
+        icon: 'pi pi-cog'
       },
       {
         label: 'Logout',
-        icon: 'pi pi-pw pi-file',
+        icon: 'pi pi-sign-out',
       }
     ];
   }

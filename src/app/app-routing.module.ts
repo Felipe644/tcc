@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DemandListComponent } from './pages/demand-list/demand-list.component';
 import {HeaderComponent} from "./components/header/header.component";
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
+import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-marca.component';
 
 const routes: Routes = [
 
@@ -27,10 +28,10 @@ const routes: Routes = [
   //   path: 'pedidos',
   //   component: MeusPedidosComponent
   // },
-  // {
-  //   path: 'marcas',
-  //   component: CadastrarMarcaComponent
-  // },
+   {
+     path: 'marcas',
+     component: CadastrarMarcaComponent
+   },
    {
      path: 'especies',
      component: CadastrarEspecieComponent
