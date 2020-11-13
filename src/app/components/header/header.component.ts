@@ -11,14 +11,6 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   public items: MenuItem[];
-// <!--    <li class="navbar-menuitem"><a href="#">Início</a></li>-->
-// <!--    <li class="navbar-menuitem"><a href="#">Minha Loja</a></li>-->
-// <!--    <li class="navbar-menuitem"><a href="#">Produtos</a></li>-->
-// <!--    <li class="navbar-menuitem"><a href="#">Marcas</a></li>-->
-// <!--    <li class="navbar-menuitem"><a routerLink="/especies">Espécies</a></li>-->
-// <!--    <li class="navbar-menuitem"><a href="#">Relatórios</a></li>-->
-// <!--    <li class="navbar-menuitem"><a href="#">Configurações</a></li>-->
-// <!--    <li class="navbar-menuitem"><a href="#">Logout</a></li>-->
 
   ngOnInit() {
     this.items = [
