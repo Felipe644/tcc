@@ -59,7 +59,7 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     PanelMenuModule,
     BrowserModule,
     BrowserAnimationsModule,
-    PanelMenuModule
+    
   ],
   providers: [],
   bootstrap: [ AppComponent ]
