@@ -1,9 +1,18 @@
 {
-  "marcas": [],
+  "marcas": [
+    {
+      "nome": "Teste ",
+      "id": 1
+    }
+  ],
   "especies": [
     {
-      "nome": "Teste Felipe",
-      "id": 1
+      "nome": "Cachorro ",
+      "id": 2
+    },
+    {
+      "nome": "Gato",
+      "id": 3
     }
   ],
   "produtos": [
