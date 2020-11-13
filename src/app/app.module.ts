@@ -12,6 +12,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { AppRoutingModule } from './app-routing.module';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
@@ -21,6 +22,7 @@ import { CardComponent } from './components/card/card.component';
 import { TitleHeaderComponent } from './components/title-header/title-header.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
+import {PanelMenuModule} from 'primeng/panelmenu';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
 // import { NovoProdutoComponent } from './components/template/novo-produto/novo-produto.component';
@@ -53,7 +55,11 @@ import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadast
     CardModule,
     InputTextareaModule,
     DropdownModule,
-    HttpClientModule
+    HttpClientModule,
+    PanelMenuModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    PanelMenuModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
