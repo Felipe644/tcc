@@ -7,7 +7,12 @@ body {
 
 .navbar {
   padding: 10px 0;
-  background-color: #1e94d2;
+  color: yellow;
+  background-color: saddlebrown;
+}
+
+body .ui-panelmenu .ui-panelmenu-header > a {
+  color: yellow !important;
 }
 
 .navbar-toggle {
@@ -15,17 +20,14 @@ body {
 }
 
 .navbar-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   width: 210px;
   margin: 0;
   padding: 0;
   z-index: 9998;
-
-  background-color: #3a3633;
-
   list-style: none;
 }
 
