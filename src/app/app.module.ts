@@ -25,6 +25,7 @@ import { NewProdutoComponent } from './components/produto/persist/new/new.compon
 import { TitleHeaderComponent } from './components/title-header/title-header.component';
 import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-marca.component';
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   imports: [
@@ -54,7 +55,8 @@ import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadast
     ListProdutoComponent,
     TitleHeaderComponent,
     CadastrarMarcaComponent,
-    CadastrarEspecieComponent
+    CadastrarEspecieComponent,
+    LoginComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
