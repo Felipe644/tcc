@@ -1,0 +1,16 @@
+
+
+.container{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404C51;
+    max-width: 400px;
+}
+
+label{
+    font-weight: bold;
+}
+
+button {
+    margin-top: 4px;
+}

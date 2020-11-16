@@ -24,6 +24,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
 import {PanelMenuModule} from 'primeng/panelmenu';
 import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-marca.component';
+import { LoginComponent } from './components/login/login.component';
 // import { HeaderComponent } from './components/template/header/header.component';
 // import { MeusPedidosComponent } from './components/template/meus-pedidos/meus-pedidos.component';
 // import { NovoProdutoComponent } from './components/template/novo-produto/novo-produto.component';
@@ -40,6 +41,8 @@ import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-
     HeaderComponent,
     CadastrarEspecieComponent,
     CadastrarMarcaComponent,
+    LoginComponent,
+    
     // MeusPedidosComponent,
     // NovoProdutoComponent,
     // MeusProdutosComponent,

@@ -53,11 +53,13 @@ export class HeaderComponent implements OnInit {
       },
       {
         label: 'Configurações',
-        icon: 'pi pi-cog'
+        icon: 'pi pi-cog',
+        routerLink: 'pessoa/cadastro'
       },
       {
         label: 'Logout',
         icon: 'pi pi-sign-out',
+        routerLink: '/login'
       }
     ];
   }
