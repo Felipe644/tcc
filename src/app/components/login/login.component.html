@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="container" >
+
+  <form>
+    <div class="p-grid p-fluid">
+
+      <div class="p-col-12">
+        <h1>Login</h1>
+      </div>
+
+      <div class="p-col-12">
+        <input pInputText type="email" name="usuario" placeholder="E-mail"
+          ngModel required #usuario>
+      </div>
+
+      <div class="p-col-12">
+        <input pInputText type="password" name="senha" placeholder="Senha"
+          ngModel required #senha>
+      </div>
+
+      <div class="p-col-12">
+        <button pButton type="submit" label="Login"></button>
+      </div>
+
+      <div class="p-col-12">
+        <button pButton type="submit" label="Sou novo quero me cadastrar" ></button>
+      </div>
+
+    </div>
+  </form>
+
+</div>
