@@ -1,0 +1,33 @@
+<app-card [titleCard]="'Meus Produtos'">
+    <p-table [value]="[0]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>IMG</th>
+                <th>CÓD. PRODUTO</th>
+                <th>NOME PROD.</th>
+                <th>CATEGORIA</th>
+                <th>STATUS</th>
+                <th>QTD. EST.</th>
+                <th>VALOR</th>
+                <th>EDITAR</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+            <tr>
+                <th>--</th>
+                <th>00958</th>
+                <th>RAÇÃO PARA CÃES</th>
+                <th>RAÇÃO</th>
+                <th>DISPONÍVEL</th>
+                <th>53</th>
+                <th>R$ 89,90</th>
+                <th>--</th>
+            </tr>
+        </ng-template>
+    </p-table>
+    <div style="display: flex; justify-content: flex-end; align-content: space-around;" class="buttons-list">
+        <div>
+            <p-button label="NOVO PRODUTO" icon="pi pi-create"  class="p-button-secondary" iconPos="right"></p-button>
+        </div>
+    </div>
+</app-card>
