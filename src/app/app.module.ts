@@ -16,7 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { AppComponent } from './app.component';
+import { ZeroToLeftPipe } from './pipes/zero-to-left.pipe';
 import { MessageComponent } from './message/message.component';
+import { EspecieService } from './shared/service/especie.service';
 import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ListProdutoComponent } from './components/produto/list/list.component';
@@ -28,35 +30,39 @@ import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadast
 
 @NgModule({
   imports: [
-    FormsModule,
-    BrowserModule,
-    AppRoutingModule,
     CardModule,
+    FormsModule,
     TableModule,
     ButtonModule,
+    BrowserModule,
     ToolbarModule,
     TooltipModule,
     BrowserModule,
     DropdownModule,
     InputTextModule,
     PanelMenuModule,
+    AppRoutingModule,
     HttpClientModule,
     InputTextareaModule,
     BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
+    CardComponent,
+    ZeroToLeftPipe,
+    HeaderComponent,
     MessageComponent,
     DemandListComponent,
-    CardComponent,
-    HeaderComponent,
     NewProdutoComponent,
     ListProdutoComponent,
     TitleHeaderComponent,
     CadastrarMarcaComponent,
-    CadastrarEspecieComponent
+    CadastrarEspecieComponent,
+    
   ],
-  providers: [],
+  providers: [
+    EspecieService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
