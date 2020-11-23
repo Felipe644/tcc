@@ -1,34 +1,76 @@
 {
   "marcas": [
     {
-      "nome": "Teste ",
+      "nome": "Pro Plan ",
       "id": 1
+    },
+    {
+      "nome": "Royal Canin",
+      "id": 2
+    },
+    {
+      "nome": "Golden",
+      "id": 3
+    },
+    {
+      "nome": "Pedigree",
+      "id": 4
     }
   ],
   "especies": [
     {
-      "nome": "Cachorro ",
-      "id": 2
+      "nome": "Furão ",
+      "id": 3
     },
     {
-      "nome": "Gato",
-      "id": 3
+      "nome": "Coelho",
+      "id": 4
+    },
+    {
+      "nome": "Papagaio",
+      "id": 5
+    },
+    {
+      "nome": "Papagaio",
+      "id": 6
     }
   ],
   "produtos": [
     {
-      "nome": "12312",
-      "codigo": "2312",
-      "codbarra": "123123",
-      "valor": "2211",
-      "categoria": "3212",
-      "quant": "2312",
-      "medida": "2131",
-      "peso": "2312",
-      "espe": "312312",
-      "status": "321312",
-      "des": "21312",
+      "codigo": "0001",
+      "codBarra": "731993455",
+      "nome": "RAÇÃO PARA GATOS",
+      "valor": "60",
+      "categoria": "RAÇÃO",
+      "status": "DISPONÍVEL",
+      "quantidade": "40",
+      "medida": "KG",
+      "peso": "60",
+      "descricao": "Ração para gatos",
       "id": 1
+    },
+    {
+      "codigo": "0002",
+      "codBarra": "731993466",
+      "nome": "RAÇÃO PARA CACHORRO",
+      "valor": "70",
+      "categoria": "RAÇÃO",
+      "status": "DISPONÍVEL",
+      "quantidade": "20",
+      "medida": "kG",
+      "peso": "70",
+      "descricao": "Ração para cachorro",
+      "id": 1
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "123",
+      "senha": "123"
+    },
+    {
+      "nome": "456",
+      "senha": "456"
     }
   ]
 }

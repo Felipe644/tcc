@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -8,7 +9,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   public items: MenuItem[];
 
@@ -17,7 +18,7 @@ export class HeaderComponent implements OnInit {
       {
         label: 'Início',
         icon: 'pi pi-home',
-        routerLink: '/'
+        routerLink: '/pedidos'
       },
       {
         label: 'Minha Loja',
@@ -30,7 +31,7 @@ export class HeaderComponent implements OnInit {
           {
             label: 'Listar produtos',
             icon: 'pi pi-minus',
-            routerLink: '/produto'
+            routerLink: '/produtos'
           },
           {
             label: 'Novo produto',
@@ -59,9 +60,14 @@ export class HeaderComponent implements OnInit {
       },
       {
         label: 'Logout',
-        icon: 'pi pi-sign-out',
+        icon: 'pi pi-sign-out'
       }
     ];
   }
 
+  logout()
+  {
+    window.localStorage.removeItem("usuarioLogado");
+    this.router.navigate(["/login"]);
+  }
 }

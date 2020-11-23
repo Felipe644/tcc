@@ -26,6 +26,8 @@ import { TitleHeaderComponent } from './components/title-header/title-header.com
 import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-marca.component';
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
 import { LoginComponent } from './components/login/login.component';
+import { DataShareService } from './components/data-share.service';
+
 
 @NgModule({
   imports: [
@@ -43,7 +45,8 @@ import { LoginComponent } from './components/login/login.component';
     PanelMenuModule,
     HttpClientModule,
     InputTextareaModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InputTextareaModule
   ],
   declarations: [
     AppComponent,
@@ -58,7 +61,9 @@ import { LoginComponent } from './components/login/login.component';
     CadastrarEspecieComponent,
     LoginComponent
   ],
-  providers: [],
+  providers: [
+    DataShareService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

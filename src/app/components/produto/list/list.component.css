@@ -1,3 +1,27 @@
 .buttons-list > div  {
     padding: 10px;
+    
+    
 }
+.container{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404C51;
+}
+.icones { 
+    width: 102px;
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1270px;
+        margin: 0 auto;
+    
+    }
+}
+
