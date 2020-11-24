@@ -13,11 +13,11 @@ export class MarcaService {
   constructor(private http: HttpClient) {}
 
   consultar(): Observable<any> {
-    return this.http.get(`${this.apiURL}/marcas`);
+    return this.http.get(`${this.apiURL}/marca`);
   }
 
   adicionar(marca: any) {
-    this.http.post(`${this.apiURL}/marcas`, marca)
+    this.http.post(`${this.apiURL}/marca`, marca)
       .subscribe(
         resultado => {
           console.log(resultado);
@@ -31,7 +31,7 @@ export class MarcaService {
   }
 
   excluir(id: number) {
-    this.http.delete(`${this.apiURL}/marcas/${id}`)
+    this.http.delete(`${this.apiURL}/marca/${id}`)
       .subscribe(
         resultado => {
           console.log('Produto excluído com sucesso.');
