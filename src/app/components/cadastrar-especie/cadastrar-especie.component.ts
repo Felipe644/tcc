@@ -24,7 +24,8 @@ export class CadastrarEspecieComponent implements OnInit {
   } 
 
   consultar(){
-    this.especieService.consultar().subscribe(resultado => {this.especie = resultado})}
+    this.especieService.consultar().subscribe(resultado => {this.especie = resultado});
+  }
 
   excluir(id: number){
     this.especieService.excluir(id);

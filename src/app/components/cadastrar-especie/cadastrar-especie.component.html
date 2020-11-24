@@ -34,12 +34,12 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-pr>
                     <tr>
-                        <td>{{pr.id}}</td>
-                        <td>{{pr.nome}}</td>
+                        <td>{{pr.idEspecie | zeroToLeft}}</td>
+                        <td>{{pr.descricao}}</td>
                         <td class="icones">  
 
                             
-                            <button pButton  icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top" (click)="excluir(pr.id)"></button>
+                            <button pButton  icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top" (click)="excluir(pr.idEspecie)"></button>
                             
                         </td>
 

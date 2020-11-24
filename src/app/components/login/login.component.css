@@ -1,10 +1,9 @@
-
-
 .container{
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     color: #404C51;
     max-width: 400px;
+    background-color: darkorchid;
 }
 
 label{

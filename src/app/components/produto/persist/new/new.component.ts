@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'src/app/shared/service/category.service';
+import { EspecieService } from 'src/app/shared/service/especie.service';
+import { MarcaService } from 'src/app/shared/service/marca.service';
 
 import { ProdutoService } from 'src/app/shared/service/produto.service';
 
@@ -11,6 +13,12 @@ import { ProdutoService } from 'src/app/shared/service/produto.service';
 export class NewProdutoComponent implements OnInit {
 
   public category = [];
+  public marca = [];
+  public especie = [];
+  public status = [
+    {id: 1, name:'Disponível'},
+    {id: 2, name:'Indisponível'}
+  ];
   produto = [];
 
   ngOnInit() {
@@ -20,7 +28,9 @@ export class NewProdutoComponent implements OnInit {
 
   constructor(
     protected produtoService: ProdutoService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private marcaService: MarcaService,
+    private especieService: EspecieService
   ) {}
 
   getCategory() {
@@ -28,6 +38,19 @@ export class NewProdutoComponent implements OnInit {
      this.category = res;
     });
   }
+  getMarca() {
+    this.marcaService.consultar().subscribe(resultado => {
+      this.marca = resultado;
+    });
+  }
+  
+  getEspecie() {
+    this.especieService.consultar().subscribe(resultado => {
+      this.especie = resultado;
+    });
+  }
+
+
 
   adicionar(codigo: Number, codBarra: Number, nome: string, valor: Number, quantidade: String, medida: String, peso: String, descricao: String ) {
     this.produtoService.adicionar({codigo, codBarra, nome, valor, quantidade, medida, peso, descricao});

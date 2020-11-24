@@ -18,7 +18,7 @@
 
             <div class="ui-g-12">
                 <button pButton style="left: 90%; width: 10%;" type="button" label="Salvar"
-                    (click)="adicionar(nome.value)" [disabled]="verifyName(nome.value)"></button>
+                    (click)="adicionar(nome.value)" [disabled]="nome.value == 0"></button>
             </div>
 
         </div>

@@ -14,16 +14,14 @@ export class EspecieService {
   constructor(private http: HttpClient) {}
 
   consultar(): Observable<any> {
-    return this.http.get(`${this.apiURL}/especies`);
+    return this.http.get(`${this.apiURL}/especie`);
+    
   }
 
-  // login(usuario:string, senha:string): Observable<any>
-  // {
-  //   this.http.get("usuarios", "select * from usuarios where usuario.nome = usuario and senha=senha");
-  // }
+
 
   adicionar(especie: any) {
-    this.http.post(`${this.apiURL}/especies`, especie)
+    this.http.post(`${this.apiURL}/especie`, especie)
       .subscribe(
         resultado => {
           console.log(resultado);
@@ -37,7 +35,7 @@ export class EspecieService {
   }
 
   excluir(id: number) {
-    this.http.delete(`${this.apiURL}/especies/${id}`)
+    this.http.delete(`${this.apiURL}/especie/${id}`)
       .subscribe(
         resultado => {
           console.log('Produto excluído com sucesso.');
