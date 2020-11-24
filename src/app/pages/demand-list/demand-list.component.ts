@@ -27,11 +27,11 @@ export class DemandListComponent implements OnInit {
   public getAll(): void {
     this.demandService.getByParceiroId(1).subscribe(res => {
       res.forEach(r => {
-        // this.demands.push({ idPedidos: r.idPedidos, nameCliente: r.idCliente, status: r.status, valorPedido: r.valorPedido });
-        this.getClientByClientId(r.idCliente);
-        this.clientes.forEach(c => {
-          this.demands.push({ idPedidos: r.idPedidos, nameCliente: c.idCliente, status: r.status, valorPedido: r.valorPedido });
-        });
+        this.demands.push({ idPedidos: r.idPedidos, nameCliente: r.idCliente, status: r.status, valorPedido: r.valorPedido });
+        // this.getClientByClientId(r.idCliente);
+        // this.clientes.forEach(c => {
+        //   this.demands.push({ idPedidos: r.idPedidos, nameCliente: c.idCliente, status: r.status, valorPedido: r.valorPedido });
+        // });
       });
     });
   }
