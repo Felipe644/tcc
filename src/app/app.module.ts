@@ -16,8 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { AppComponent } from './app.component';
+import { ZeroToLeftPipe } from './pipes/zero-to-left.pipe';
 import { MessageComponent } from './message/message.component';
 import { CardComponent } from './components/card/card.component';
+import { EspecieService } from './shared/service/especie.service';
 import { HeaderComponent } from './components/header/header.component';
 import { ListProdutoComponent } from './components/produto/list/list.component';
 import { DemandListComponent } from './pages/demand-list/demand-list.component';
@@ -31,18 +33,18 @@ import { DataShareService } from './components/data-share.service';
 
 @NgModule({
   imports: [
-    FormsModule,
-    BrowserModule,
-    AppRoutingModule,
     CardModule,
+    FormsModule,
     TableModule,
     ButtonModule,
+    BrowserModule,
     ToolbarModule,
     TooltipModule,
     BrowserModule,
     DropdownModule,
     InputTextModule,
     PanelMenuModule,
+    AppRoutingModule,
     HttpClientModule,
     InputTextareaModule,
     BrowserAnimationsModule,
@@ -50,10 +52,11 @@ import { DataShareService } from './components/data-share.service';
   ],
   declarations: [
     AppComponent,
+    CardComponent,
+    ZeroToLeftPipe,
+    HeaderComponent,
     MessageComponent,
     DemandListComponent,
-    CardComponent,
-    HeaderComponent,
     NewProdutoComponent,
     ListProdutoComponent,
     TitleHeaderComponent,
@@ -62,6 +65,7 @@ import { DataShareService } from './components/data-share.service';
     LoginComponent
   ],
   providers: [
+    EspecieService,
     DataShareService
   ],
   bootstrap: [ AppComponent ]
