@@ -30,18 +30,8 @@ export class MarcaService {
       );
   }
 
-  excluir(id: number) {
-    this.http.delete(`${this.apiURL}/marca/${id}`)
-      .subscribe(
-        resultado => {
-          console.log('Produto excluído com sucesso.');
-        },
-        erro => {
-          if (erro.status === 404) {
-            console.log('Produto não localizado.');
-          }
-        }
-      );
+  excluir(id: number): Observable<any> {
+    return this.http.delete(`${this.apiURL}/marca/${id}`);
   }
 
 }
