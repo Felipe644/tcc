@@ -27,6 +27,9 @@ import { NewProdutoComponent } from './components/produto/persist/new/new.compon
 import { TitleHeaderComponent } from './components/title-header/title-header.component';
 import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-marca.component';
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
+import { LoginComponent } from './components/login/login.component';
+import { DataShareService } from './components/data-share.service';
+
 
 @NgModule({
   imports: [
@@ -44,7 +47,8 @@ import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadast
     AppRoutingModule,
     HttpClientModule,
     InputTextareaModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InputTextareaModule
   ],
   declarations: [
     AppComponent,
@@ -58,10 +62,11 @@ import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadast
     TitleHeaderComponent,
     CadastrarMarcaComponent,
     CadastrarEspecieComponent,
-    
+    LoginComponent
   ],
   providers: [
-    EspecieService
+    EspecieService,
+    DataShareService
   ],
   bootstrap: [ AppComponent ]
 })

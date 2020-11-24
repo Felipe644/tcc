@@ -19,8 +19,8 @@ export class NewProdutoComponent implements OnInit {
     protected produtoService: ProdutoService
   ) {}
 
-  adicionar(nome: string) {
-    this.produtoService.adicionar({nome});
+  adicionar(codigo: Number, codBarra: Number, nome: string, valor: Number, quantidade: String, medida: String, peso: String, descricao: String ) {
+    this.produtoService.adicionar({codigo, codBarra, nome, valor, quantidade, medida, peso, descricao});
     this.consultar();
   }
 

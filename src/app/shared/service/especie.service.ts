@@ -17,6 +17,11 @@ export class EspecieService {
     return this.http.get(`${this.apiURL}/especies`);
   }
 
+  // login(usuario:string, senha:string): Observable<any>
+  // {
+  //   this.http.get("usuarios", "select * from usuarios where usuario.nome = usuario and senha=senha");
+  // }
+
   adicionar(especie: any) {
     this.http.post(`${this.apiURL}/especies`, especie)
       .subscribe(
