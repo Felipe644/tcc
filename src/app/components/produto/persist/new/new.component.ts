@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/shared/service/category.service';
 
 import { ProdutoService } from 'src/app/shared/service/produto.service';
 
@@ -9,15 +10,24 @@ import { ProdutoService } from 'src/app/shared/service/produto.service';
 })
 export class NewProdutoComponent implements OnInit {
 
+  public category = [];
   produto = [];
 
   ngOnInit() {
     this.consultar();
+    this.getCategory();
   }
 
   constructor(
-    protected produtoService: ProdutoService
+    protected produtoService: ProdutoService,
+    private categoryService: CategoryService
   ) {}
+
+  getCategory() {
+    this.categoryService.get().subscribe(res => {
+     this.category = res;
+    });
+  }
 
   adicionar(codigo: Number, codBarra: Number, nome: string, valor: Number, quantidade: String, medida: String, peso: String, descricao: String ) {
     this.produtoService.adicionar({codigo, codBarra, nome, valor, quantidade, medida, peso, descricao});

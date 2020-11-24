@@ -15,20 +15,32 @@ export class CadastrarMarcaComponent implements OnInit {
 
   }
 
-  constructor(private marcaService: MarcaService) {}
+  constructor(private marcaService: MarcaService) { }
 
-  adicionar(nome: string){
-    this.marcaService.adicionar({nome});
+  adicionar(nome: string) {
+    this.marcaService.adicionar({ nome });
     this.consultar();
 
-  } 
-
-  consultar(){
-    this.marcaService.consultar().subscribe(resultado => {this.marca = resultado})}
-
-  excluir(id: number){
-    this.marcaService.excluir(id);
-    this.consultar();
+  }
+  
+  public verifyName(nome: string) {
+    return nome ? true : false;
   }
 
+  consultar() {
+    this.marcaService.consultar().subscribe(resultado => this.marca = resultado);
+  }
+
+  excluir(id: number) {
+    this.marcaService.excluir(id).subscribe(res => {
+      console.log('Produto excluído com sucesso.');
+      this.consultar();
+    },
+      erro => {
+        if (erro.status === 404) {
+          console.log('Produto não localizado.');
+        }
+      }
+    );
+  }
 }
