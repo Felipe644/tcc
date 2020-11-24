@@ -29,11 +29,13 @@ export class HeaderComponent implements OnInit {
         items: [
           {
             label: 'Listar produtos',
-            icon: 'pi pi-minus'
+            icon: 'pi pi-minus',
+            routerLink: '/produto'
           },
           {
             label: 'Novo produto',
-            icon: 'pi pi-minus'
+            icon: 'pi pi-minus',
+            routerLink: '/produto/cadastrar'
           }
         ]
       },

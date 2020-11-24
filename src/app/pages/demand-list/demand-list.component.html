@@ -1,7 +1,7 @@
 
 
 <app-card [titleCard]="'Pedidos'">
-    <p-table [value]="[0]">
+    <p-table [value]="demands">
         <ng-template pTemplate="header">
             <tr>
                 <th style="width: 3rem">
@@ -14,15 +14,15 @@
                 <th>ABRIR PEDIDO</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body">
+        <ng-template pTemplate="body" let-demand>
             <tr>
                 <td>
-                    <p-tableCheckbox [value]="false"></p-tableCheckbox>
+                    <p-tableCheckbox [value]="true"></p-tableCheckbox>
                 </td>
-                <td>00001</td>
-                <td>José Pericles</td>
-                <td>Aguardando Confirmação</td>
-                <td>R$ 89,90</td>
+                <td>{{ demand.idPedidos | zeroToLeft }}</td>
+                <td> {{ demand.nameCliente }}</td>
+                <td>{{ demand.status ? 'Confirmado' : 'Aguardando Confirmação' }}</td>
+                <td>{{ demand.valorPedido | currency: 'R$'}}</td>
                 <td>
                     <i class="pi pi-external-link" style="font-size: 2rem"></i>
                 </td>
