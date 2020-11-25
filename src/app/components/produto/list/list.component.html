@@ -22,16 +22,16 @@
                 <ng-template pTemplate="body" let-pro>
                     <tr>
                         <td>--</td>
-                        <td>{{pro.codigo}}</td>
-                        <td>{{pro.nome}}</td>
-                        <td>{{pro.categoria}}</td>
+                        <td>{{pro.idProduto}}</td>
+                        <td>{{pro.descricaoProduto}}</td>
+                        <td>{{pro.idCategoria}}</td>
                         <td>{{pro.status}}</td>
                         <td>105</td>
                         <td>{{pro.valor}}</td>
                         <td class="icones">  
 
                             
-                            <button pButton  icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top" (click)="excluir(pro.id)"></button>
+                            <button pButton  icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top" (click)="excluir(pro.idProduto)"></button>
                             
                         </td>
                     </tr>
