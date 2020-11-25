@@ -9,8 +9,8 @@
 
             <div class="ui-g-2">
                 <label style="display: block;">Código *</label>
-                <input style="width: 100%;" type="text" pInputText name="idProduto" ngModel #idProduto="ngModel" required />
-                <app-message [control]="idProduto" error="required" text="Campo obrigatório."></app-message>
+                <input style="width: 100%;" type="text" pInputText name="codigo" ngModel #codigo="ngModel" required />
+                <app-message [control]="codigo" error="required" text="Campo obrigatório."></app-message>
             </div>
 
             <div class="ui-g-8">
@@ -71,8 +71,11 @@
             <div class="ui-g-12">
                 <button pButton routerLink="/produtos" style="left: 76%; width: 10%;" type="button" label="Cancelar" ></button>
                 <button pButton routerLink="/produtos" style="left: 80%; width: 10%;" type="button" label="Salvar"
+                (click)="adicionar(codigo.value, nome.value, valor.value, quantidade.value, medida.value, peso.value, descricao.value)" ></button>
+
+                <!-- <button pButton routerLink="/produtos" style="left: 80%; width: 10%;" type="button" label="Salvar"
                 (click)="adicionar(idProduto.value, nome.value, valor.value, idCategoria.value, quantidade.value, idMarca.value,
-                 unidadeMedida.value, peso.value, idEspecie.value,status.value, descricaoProduto.value)" ></button>
+                 unidadeMedida.value, peso.value, idEspecie.value,status.value, descricaoProduto.value)" ></button> -->
             </div>
 
         </div>

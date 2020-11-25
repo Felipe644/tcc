@@ -17,17 +17,8 @@ export class MarcaService {
   }
 
   adicionar(marca: any) {
-    this.http.post(`${this.apiURL}/marca`, marca)
-      .subscribe(
-        resultado => {
-          console.log(resultado);
-        },
-        erro => {
-          if (erro.status === 400) {
-            console.log(erro);
-          }
-        }
-      );
+    return this.http.post(`${this.apiURL}/marca`, marca)
+    
   }
 
   excluir(id: number): Observable<any> {

@@ -18,10 +18,21 @@ export class CadastrarMarcaComponent implements OnInit {
   constructor(private marcaService: MarcaService) { }
 
   adicionar(nome: string) {
-    this.marcaService.adicionar({ nome });
-    this.consultar();
+    
+    this.marcaService.adicionar({ nome: nome }).subscribe(
+      resultado => {
+        console.log(resultado);
+        this.consultar();
+      },
+      erro => {
+        if (erro.status === 400) {
+          console.log(erro);
+        }
+      }
+    );;
 
   }
+  
   
   public verifyName(nome: string) {
     return nome ? true : false;

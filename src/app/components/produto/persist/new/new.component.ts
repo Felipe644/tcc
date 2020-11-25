@@ -24,6 +24,7 @@ export class NewProdutoComponent implements OnInit {
   ngOnInit() {
     this.consultar();
     this.getCategory();
+    this.getMarca();
   }
 
   constructor(
@@ -51,13 +52,16 @@ export class NewProdutoComponent implements OnInit {
   }
 
 
-
-  adicionar(idProduto: Number, nome: string, valor: Number, idCategoria:Number, quantidade: Number, idMarca: Number,
-    unidadeMedida: string, peso: Number, idEspecie: Number,status: string, descricaoProduto: string) {
-    this.produtoService.adicionar({idProduto, nome, valor, idCategoria, quantidade, idMarca,
-      unidadeMedida, peso, idEspecie,status, descricaoProduto});
+  adicionar(codigo: Number, nome: string, valor: Number, quantidade: String, medida: String, peso: String, descricao: String ) {
+    this.produtoService.adicionar({codigo, nome, valor, quantidade, medida, peso, descricao});
     this.consultar();
   }
+  // adicionar(idProduto: Number, nome: string, valor: Number, idCategoria:Number, quantidade: Number, idMarca: Number,
+  //   unidadeMedida: string, peso: Number, idEspecie: Number,status: string, descricaoProduto: string) {
+  //   this.produtoService.adicionar({idProduto, nome, valor, idCategoria, quantidade, idMarca,
+  //     unidadeMedida, peso, idEspecie,status, descricaoProduto});
+  //   this.consultar();
+  // }
 
   consultar() {
     this.produtoService.consultar().subscribe(resultado => {this.produto = resultado})}
