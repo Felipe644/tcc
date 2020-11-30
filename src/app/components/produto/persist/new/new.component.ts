@@ -93,17 +93,10 @@ export class NewProdutoComponent implements OnInit {
   }
   
 
-  enviarArquivo() {
-    // this.produtoService.uploadImage(this.uploadedFiles[0]).subscribe(e =>{
-    //   this.produto.urlImage = e;
-    //   this.produtoService.adicionar(produto).subscribe()......
-    // });
-  }
-
-  adicionar(descricaoProduto: string, valor: Number, qtdEstoque: Number, medida: string, peso: string,
-    status: string, nome: string, ) {
+  adicionar(descricaoProduto: string, valor: Number, qtdEstoque: Number, medida: string, peso: string, nome: string) {
+    //console.log('teste' + idEspecie)
     this.produtoService.adicionar({descricaoProduto, valor, qtdEstoque, medida, peso,
-      status, nome, idMarca: "26", idEspecie: "1", idCategoria: "1", idParceiro: "1", imagem: this.base64Img});
+      status: "Ativo", nome, idMarca: "26", idEspecie: "1", idCategoria: "1", idParceiro: "1",  imagem: this.base64Img});
     this.consultar();
   }
 
