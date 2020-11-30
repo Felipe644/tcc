@@ -62,7 +62,7 @@ export class AuthGuard implements CanActivate
                 
                 retorno.next(true);
                 retorno.complete();
-s
+
                 return this.router.navigate(["/login"]);
             });
         }
