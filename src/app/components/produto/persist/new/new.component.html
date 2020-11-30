@@ -9,8 +9,8 @@
 
             <div class="ui-g-2">
                 <label style="display: block;">Código *</label>
-                <input style="width: 100%;" type="text" pInputText name="codigo" ngModel #codigo="ngModel" required />
-                <app-message [control]="codigo" error="required" text="Campo obrigatório."></app-message>
+                <input style="width: 100%;" type="text" pInputText name="idProduto" ngModel #idProduto="ngModel" required />
+                <app-message [control]="idProduto" error="required" text="Campo obrigatório."></app-message>
             </div>
 
             <div class="ui-g-8">
@@ -27,18 +27,20 @@
 
             <div class="ui-g-2">
                 <label style="display: block;">Categoria *</label>
-                <p-dropdown placeholder="Selecione" [options]="category" optionLabel="descricaoCategoria"></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="category" name="idCategoria" ngModel #idCategoria="ngModel" optionLabel="descricaoCategoria"></p-dropdown>
+            
             </div>
 
             <div class="ui-g-2">
                 <label style="display: block;">Quantidade *</label>
-                <input style="width: 100%;" type="text" pInputText name="quantidade" ngModel #quantidade="ngModel" required />
-                <app-message [control]="quantidade" error="required" text="Campo obrigatório."></app-message>
+                <input style="width: 100%;" type="text" pInputText name="qtdEstoque" ngModel #qtdEstoque="ngModel" required />
+                <app-message [control]="qtdEstoque" error="required" text="Campo obrigatório."></app-message>
             </div>
 
             <div class="ui-g-2">
                 <label style="display: block;">Marca *</label>
-                <p-dropdown placeholder="Selecione" [options]="marca" optionLabel="descricaoMarca"></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="marca" name="idMarca" ngModel #idMarca="ngModel" optionLabel="descricaoMarca"></p-dropdown>
+                
             </div>
 
             <div class="ui-g-4">
@@ -55,27 +57,36 @@
 
             <div class="ui-g-2">
                 <label style="display: block;">Espécie *</label>
-                <p-dropdown placeholder="Selecione" [options]="especie" optionLabel="descricao" ></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="especie" name="idEspecie" ngModel #idEspecie="ngModel" optionLabel="descricao" ></p-dropdown>
             </div>
             
             <div class="ui-g-2">
                 <label style="display: block;">Status *</label>
-                <p-dropdown placeholder="Selecione" [options]="status" optionLabel="name"></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="statuss" optionLabel="name"  name="status" ngModel #status="ngModel"></p-dropdown>
             </div>
 
             <div class="ui-g-12">
                 <label style="display: block;">Descrição *</label>
-                <textarea pInputTextarea style="width: 100%;" type="text"  name="descricao" ngModel #descricao="ngModel" required></textarea>               <app-message [control]="medida" error="required" text="Campo obrigatório."></app-message>
+                <textarea pInputTextarea style="width: 100%;" type="text"  name="descricaoProduto" ngModel #descricaoProduto="ngModel" required></textarea>
+                <app-message [control]="descricaoProduto" error="required" text="Campo obrigatório."></app-message>
             </div>
+            
+            <div class="ui-g-12">
+                <label style="display: block;">Selecione uma Imagem</label>
+                <p-fileUpload name="demo[]" (onSelect)="onUpload($event)"
+                    accept="image/*" maxFileSize="1000000">
+                    <ng-template pTemplate="content">
+                    </ng-template>
+                </p-fileUpload>
+            </div>
+
 
             <div class="ui-g-12">
                 <button pButton routerLink="/produtos" style="left: 76%; width: 10%;" type="button" label="Cancelar" ></button>
+                
                 <button pButton routerLink="/produtos" style="left: 80%; width: 10%;" type="button" label="Salvar"
-                (click)="adicionar(codigo.value, nome.value, valor.value, quantidade.value, medida.value, peso.value, descricao.value)" ></button>
-
-                <!-- <button pButton routerLink="/produtos" style="left: 80%; width: 10%;" type="button" label="Salvar"
-                (click)="adicionar(idProduto.value, nome.value, valor.value, idCategoria.value, quantidade.value, idMarca.value,
-                 unidadeMedida.value, peso.value, idEspecie.value,status.value, descricaoProduto.value)" ></button> -->
+                (click)="adicionar(descricaoProduto.value, valor.value, qtdEstoque.value, medida.value, peso.value,
+                status.value, nome.value)" ></button>
             </div>
 
         </div>

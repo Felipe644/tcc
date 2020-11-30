@@ -14,20 +14,18 @@
                         <th>NOME PROD.</th>
                         <th>CATEGORIA</th>
                         <th>STATUS</th>
-                        <th>QTD. EST.</th>
                         <th>VALOR</th>
                         <th class="icones">AÇÕES</th>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-pro>
                     <tr>
-                        <td>--</td>
-                        <td>{{pro.idProduto}}</td>
+                        <td><img [src]="pro.urlImage" width="100" height="100"></td>
+                        <td>{{pro.idProduto | zeroToLeft}}</td>
                         <td>{{pro.descricaoProduto}}</td>
-                        <td>{{pro.idCategoria}}</td>
+                        <td>{{pro.descricaoCategoria}}</td>
                         <td>{{pro.status}}</td>
-                        <td>105</td>
-                        <td>{{pro.valor}}</td>
+                        <td>{{pro.valor | currency: 'R$'}}</td>
                         <td class="icones">  
 
                             

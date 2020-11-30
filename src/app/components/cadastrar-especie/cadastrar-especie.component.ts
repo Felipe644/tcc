@@ -17,9 +17,19 @@ export class CadastrarEspecieComponent implements OnInit {
 
   constructor(private especieService: EspecieService) {}
 
-  adicionar(nome: string){
-    this.especieService.adicionar({nome});
-    this.consultar();
+  adicionar(descricao: string){
+    this.especieService.adicionar({descricao}).subscribe(
+      resultado => {
+        console.log(resultado);
+        this.consultar();
+      },
+      erro => {
+        if (erro.status === 400) {
+          console.log(erro);
+        }
+      }
+    );
+    
 
   } 
 

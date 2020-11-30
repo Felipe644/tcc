@@ -29,6 +29,7 @@ import { CadastrarMarcaComponent } from './components/cadastrar-marca/cadastrar-
 import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadastrar-especie.component';
 import { LoginComponent } from './components/login/login.component';
 import { DataShareService } from './components/data-share.service';
+import {FileUploadModule} from 'primeng/fileupload';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { DataShareService } from './components/data-share.service';
     HttpClientModule,
     InputTextareaModule,
     BrowserAnimationsModule,
-    InputTextareaModule
+    InputTextareaModule,
+    FileUploadModule
   ],
   declarations: [
     AppComponent,

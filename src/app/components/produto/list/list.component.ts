@@ -22,8 +22,8 @@ export class ListProdutoComponent implements OnInit {
   consultar() {
     this.produtoService.consultar().subscribe(resultado => {this.produto = resultado})}
 
-    excluir(id: number){
-      this.produtoService.excluir(id);
+    excluir(idProduto: number){
+      this.produtoService.excluir(idProduto);
       this.consultar();
     }
 

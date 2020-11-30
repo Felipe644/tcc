@@ -13,11 +13,25 @@ export class ProdutoService {
 
   constructor(private http: HttpClient) {}
 
-  consultar(): Observable<any> {
+  consultar(): Observable<any>{
     return this.http.get(`${this.apiURL}/produto`);
   }
 
+  // public uploadImage(arquivo: File): Observable<Object> {
+  //   const formData = new FormData();
+
+  //   formData.append('arquivo', arquivo);
+
+  //   return this.http.post('/api/v1/image-upload', formData);
+  // }
+
   adicionar(produto: any) {
+
+    // const formData = new FormData();
+    // formData.append('arquivo', arquivo);
+    // formData.append('produto', produto);
+
+
     this.http.post(`${this.apiURL}/produto`, produto)
       .subscribe(
         resultado => {

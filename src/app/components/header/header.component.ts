@@ -60,7 +60,8 @@ export class HeaderComponent implements OnInit {
       },
       {
         label: 'Logout',
-        icon: 'pi pi-sign-out'
+        icon: 'pi pi-sign-out',
+        routerLink: this.logout
       }
     ];
   }

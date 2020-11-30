@@ -10,15 +10,15 @@
 
             <div class="ui-g-12">
                 <label style="display: block;">Nome *</label>
-                <input style="width: 100%;" type="text" pInputText name="nome" ngModel #nome="ngModel" required />
+                <input style="width: 100%;" type="text" pInputText name="descricaoMarca" ngModel #descricaoMarca="ngModel" required />
 
-                <app-message [control]="nome" error="required" text="Campo obrigatório!"></app-message>
+                <app-message [control]="descricaoMarca" error="required" text="Campo obrigatório!"></app-message>
             </div>
 
 
             <div class="ui-g-12">
                 <button pButton style="left: 90%; width: 10%;" type="button" label="Salvar"
-                    (click)="adicionar(nome.value)" [disabled]="nome.value == 0"></button>
+                    (click)="adicionar(descricaoMarca.value)" [disabled]="descricaoMarca.value == 0"></button>
             </div>
 
         </div>
