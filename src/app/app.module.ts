@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {ToastModule} from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
@@ -30,10 +31,12 @@ import { CadastrarEspecieComponent } from './components/cadastrar-especie/cadast
 import { LoginComponent } from './components/login/login.component';
 import { DataShareService } from './components/data-share.service';
 import {FileUploadModule} from 'primeng/fileupload';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
   imports: [
+    ToastModule,
     CardModule,
     FormsModule,
     BrowserModule,
@@ -70,7 +73,8 @@ import {FileUploadModule} from 'primeng/fileupload';
   ],
   providers: [
     EspecieService,
-    DataShareService
+    DataShareService,
+    MessageService
   ],
   bootstrap: [ AppComponent ]
 })

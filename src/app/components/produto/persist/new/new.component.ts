@@ -15,6 +15,7 @@ export class NewProdutoComponent implements OnInit {
 
   uploadedFiles: any[] = [];
 
+  public especieObj: any;
   public category = [];
   public marca = [];
   public especie = [];
@@ -93,10 +94,9 @@ export class NewProdutoComponent implements OnInit {
   }
   
 
-  adicionar(descricaoProduto: string, valor: Number, qtdEstoque: Number, medida: string, peso: string, nome: string) {
-    //console.log('teste' + idEspecie)
+  adicionar(descricaoProduto: string, valor: Number, qtdEstoque: Number, idEspecie: number, medida: string, peso: string, nome: string) {
     this.produtoService.adicionar({descricaoProduto, valor, qtdEstoque, medida, peso,
-      status: "Ativo", nome, idMarca: "26", idEspecie: "1", idCategoria: "1", idParceiro: "1",  imagem: this.base64Img});
+      status: "Ativo", nome, idMarca: "26", idEspecie, idCategoria: "1", idParceiro: "1",  imagem: this.base64Img});
     this.consultar();
   }
 

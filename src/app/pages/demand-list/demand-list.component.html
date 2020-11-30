@@ -20,8 +20,8 @@
                     <p-tableCheckbox [value]="true"></p-tableCheckbox>
                 </td>
                 <td>{{ demand.idPedidos | zeroToLeft }}</td>
-                <td>{{ demand.nameCliente }}</td>
-                <td>{{ demand.status ? 'Confirmado' : 'Aguardando Confirmação' }}</td>
+                <td>{{ demand.nomeCliente }}</td>
+                <td>{{ demand.status }}</td>
                 <td>{{ demand.valorPedido | currency: 'R$'}}</td>
                 <td class="icones">
                     <button pButton  icon="pi pi-external-link" pTooltip="Abrir Pedido" tooltipPosition="top"></button>
@@ -32,10 +32,12 @@
     </p-table>
     <div style="display: flex; justify-content: flex-end; align-content: space-around;" class="buttons-list">
         <div>
-            <p-button label="ENVIAR PEDIDO" icon="pi pi-envelope"  class="p-button-secondary" iconPos="right"></p-button>
+            <p-button label="ENVIAR PEDIDO" icon="pi pi-envelope"  class="p-button-secondary" iconPos="right" (click)="send()"></p-button>
         </div>
         <div>
             <p-button label="FINALIZAR O PEDIDO" icon="pi pi-check"  class="p-button-secondary" iconPos="right"></p-button>
         </div>
     </div>
 </app-card>
+<p-toast></p-toast>
+

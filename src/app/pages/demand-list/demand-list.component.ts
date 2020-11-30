@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { ClienteService } from 'src/app/shared/service/cliente.service';
 import { DemandService } from 'src/app/shared/service/demand.service';
 import { EspecieService } from 'src/app/shared/service/especie.service';
@@ -10,13 +11,15 @@ import { EspecieService } from 'src/app/shared/service/especie.service';
 })
 export class DemandListComponent implements OnInit {
 
+  
   public demands = [];
   public clientes = [];
   public listDemands = [];
 
   constructor(
     private demandService: DemandService,
-    private clienteService: ClienteService
+    private clienteService: ClienteService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -24,21 +27,23 @@ export class DemandListComponent implements OnInit {
 
   }
 
+  public send(): void {
+    this.messageService.add({severity:'success', summary:'', detail:'ENVIADO COM SUCESSO'});
+  }
+
   public getAll(): void {
     this.demandService.getByParceiroId(1).subscribe(res => {
       res.forEach(r => {
-        this.demands.push({ idPedidos: r.idPedidos, nameCliente: r.idCliente, status: r.status, valorPedido: r.valorPedido });
-        // this.getClientByClientId(r.idCliente);
-        // this.clientes.forEach(c => {
-        //   this.demands.push({ idPedidos: r.idPedidos, nameCliente: c.idCliente, status: r.status, valorPedido: r.valorPedido });
-        // });
+        this.getClientByClientId(r);
       });
     });
   }
 
-  public getClientByClientId(id: string): void {
-    this.clienteService.getById(id).subscribe(res => {
-      this.clientes.push(res);
+  public getClientByClientId(parceiro: any): void {
+    let i = 0;
+    this.clienteService.getById(parceiro.idCliente).subscribe(cliente => {
+      this.demands.push({ idPedidos: parceiro.idPedidos, nomeCliente: cliente[i].nome, status: parceiro.status, valorPedido: parceiro.valorPedido });
+      i++;
     });
   }
 

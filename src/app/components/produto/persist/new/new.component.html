@@ -57,7 +57,7 @@
 
             <div class="ui-g-2">
                 <label style="display: block;">Espécie *</label>
-                <p-dropdown placeholder="Selecione" [options]="especie" name="idEspecie" ngModel #idEspecie="ngModel" optionLabel="descricao" ></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="especie" name="especie" [(ngModel)]="especieObj" optionLabel="descricao" ></p-dropdown>
             </div>
             
             <div class="ui-g-2">
@@ -85,7 +85,7 @@
                 <button pButton routerLink="/produtos" style="left: 76%; width: 10%;" type="button" label="Cancelar" ></button>
                 
                 <button pButton routerLink="/produtos" style="left: 80%; width: 10%;" type="button" label="Salvar"
-                (click)="adicionar(descricaoProduto.value, valor.value, qtdEstoque.value, medida.value, peso.value, nome.value)" ></button>s
+                (click)="adicionar(descricaoProduto.value, valor.value, qtdEstoque.value, especieObj.idEspecie, medida.value, peso.value, nome.value)" ></button>
             </div>
 
         </div>

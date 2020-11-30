@@ -31,12 +31,6 @@ const routes: Routes = [
     component: LoginComponent
 
   },
-  // {
-  //   path: 'pedidos',
-  //   component: MeusPedidosComponent,
-  //     canActivate: [AuthGuard]
-
-  // },
   {
     path: 'marcas',
     component: CadastrarMarcaComponent,
