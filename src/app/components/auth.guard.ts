@@ -24,17 +24,17 @@ export class AuthGuard implements CanActivate
     consultar(email:string, senha:string): Observable<any>
     {
         // get
-        let params = new HttpParams();
+        // let params = new HttpParams();
 
-        params = params.append('email', email);
-        params = params.append('senha', senha);
-        return this.http.get(`${this.apiURL}/usuariosLogin`,  { params: params });
+        // params = params.append('email', email);
+        // params = params.append('senha', senha);
+        // return this.http.get(`${this.apiURL}/usuariosLogin`,  { params: params });
 
         //post
-        // const formData = new FormData();
-        // formData.append('email', email);
-        // formData.append('senha', senha);
-        // return this.http.post(`${this.apiURL}/usuariosLogin`,  formData);
+        const formData = new FormData();
+        formData.append('email', email);
+        formData.append('senha', senha);
+        return this.http.post(`${this.apiURL}/usuariosLogin`,  formData);
       }
 
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean | UrlTree 
@@ -62,7 +62,7 @@ export class AuthGuard implements CanActivate
                 
                 retorno.next(true);
                 retorno.complete();
-
+s
                 return this.router.navigate(["/login"]);
             });
         }
