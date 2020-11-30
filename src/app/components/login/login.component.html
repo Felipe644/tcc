@@ -1,6 +1,6 @@
 <div class="container">
 
-  <form>
+  <form [formGroup]="form">
     <div class="p-grid p-fluid">
 
       <div class="p-col-12">
@@ -8,13 +8,13 @@
       </div>
 
       <div class="p-col-12">
-        <input pInputText type="email" name="usuario" placeholder="E-mail"
-          ngModel required #usuario>
+        <input pInputText type="email" formControlName="email" placeholder="E-mail"
+          >
       </div>
 
       <div class="p-col-12">
-        <input pInputText type="password" name="senha" placeholder="Senha"
-          ngModel required #senha>
+        <input pInputText type="password" formControlName="senha" placeholder="Senha"
+          >
       </div>
 
       <div class="p-col-6">

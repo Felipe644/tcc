@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataShareService } from '../data-share.service';
 
@@ -9,9 +10,14 @@ import { DataShareService } from '../data-share.service';
 })
 export class LoginComponent implements OnInit 
 {
-  constructor(private router:Router, private dataShare:DataShareService)
-  {
+  form:FormGroup;
 
+  constructor(private router:Router, private dataShare:DataShareService, private formBuilder:FormBuilder)
+  {
+    this.form = new FormGroup({
+      email: new FormControl(''),
+      senha: new FormControl('')
+    });
   }
 
   ngOnInit(): void {
@@ -20,8 +26,8 @@ export class LoginComponent implements OnInit
 
   public login()
   {
-    window.localStorage.setItem("usuarioLogado", JSON.stringify({"nome": "123", "senha":"123"}));
-    this.router.navigate(["/pedidos"]);
+    window.localStorage.setItem("usuarioLogado", JSON.stringify(this.form.value));
+    this.router.navigate(["/produtos"]);
   }
 
   
