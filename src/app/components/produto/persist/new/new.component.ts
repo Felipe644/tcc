@@ -16,6 +16,10 @@ export class NewProdutoComponent implements OnInit {
   uploadedFiles: any[] = [];
 
   public especieObj: any;
+  public categoriaObj: any;
+  public marcaObj: any;
+  public statusObj: any;
+
   public category = [];
   public marca = [];
   public especie = [];
@@ -40,6 +44,8 @@ export class NewProdutoComponent implements OnInit {
     private marcaService: MarcaService,
     private especieService: EspecieService,
   ) {}
+
+
 
   getCategory() {
     this.categoryService.get().subscribe(res => {
@@ -94,9 +100,10 @@ export class NewProdutoComponent implements OnInit {
   }
   
 
-  adicionar(descricaoProduto: string, valor: Number, qtdEstoque: Number, idEspecie: number, medida: string, peso: string, nome: string) {
-    this.produtoService.adicionar({descricaoProduto, valor, qtdEstoque, medida, peso,
-      status: "Ativo", nome, idMarca: "26", idEspecie, idCategoria: "1", idParceiro: "1",  imagem: this.base64Img});
+  adicionar(nome: string, valor: Number, idCategoria: Number, qtdEstoque: Number, idMarca: Number, 
+                medida: string, peso: Number, idEspecie: Number, descricaoProduto: string) {
+    this.produtoService.adicionar({nome, valor, idCategoria, qtdEstoque, idMarca, 
+      medida, peso, idEspecie, status: "Ativo", descricaoProduto, idParceiro: "1", imagem: this.base64Img});
     this.consultar();
   }
 

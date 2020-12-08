@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit
   public login()
   {
     window.localStorage.setItem("usuarioLogado", JSON.stringify(this.form.value));
-    this.router.navigate(["/produtos"]);
+    this.router.navigate(["/pedidos"]);
   }
 
   

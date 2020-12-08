@@ -30,6 +30,10 @@ export class DemandListComponent implements OnInit {
   public send(): void {
     this.messageService.add({severity:'success', summary:'', detail:'ENVIADO COM SUCESSO'});
   }
+  public fina(): void {
+    this.messageService.add({severity:'success', summary:'', detail:'PEDIDO FINALIZADO'});
+  }
+
 
   public getAll(): void {
     this.demandService.getByParceiroId(1).subscribe(res => {
@@ -42,7 +46,7 @@ export class DemandListComponent implements OnInit {
   public getClientByClientId(parceiro: any): void {
     let i = 0;
     this.clienteService.getById(parceiro.idCliente).subscribe(cliente => {
-      this.demands.push({ idPedidos: parceiro.idPedidos, nomeCliente: cliente[i].nome, status: parceiro.status, valorPedido: parceiro.valorPedido });
+      this.demands.push({ idPedidos: parceiro.idPedidos, status: parceiro.status, valorPedido: parceiro.valorPedido });
       i++;
     });
   }

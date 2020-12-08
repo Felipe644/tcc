@@ -20,14 +20,14 @@
             </div>
 
             <div class="ui-g-2">
-                <label style="display: block;">Valor *</label>
+                <label style="display: block;">Valor R$*</label>
                 <input style="width: 100%;" type="text" pInputText name="valor" ngModel #valor="ngModel" required />
                 <app-message [control]="valor" error="required" text="Campo obrigatório."></app-message>
             </div>
 
             <div class="ui-g-2">
                 <label style="display: block;">Categoria *</label>
-                <p-dropdown placeholder="Selecione" [options]="category" name="idCategoria" ngModel #idCategoria="ngModel" optionLabel="descricaoCategoria"></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="category" name="categoria" [(ngModel)]="categoriaObj" optionLabel="descricaoCategoria"></p-dropdown>
             
             </div>
 
@@ -39,12 +39,12 @@
 
             <div class="ui-g-2">
                 <label style="display: block;">Marca *</label>
-                <p-dropdown placeholder="Selecione" [options]="marca" name="idMarca" ngModel #idMarca="ngModel" optionLabel="descricaoMarca"></p-dropdown>
+                <p-dropdown placeholder="Selecione" [options]="marca" name="marca" [(ngModel)]="marcaObj" optionLabel="descricaoMarca"></p-dropdown>
                 
             </div>
 
             <div class="ui-g-4">
-                <label style="display: block;">Medida *</label>
+                <label style="display: block;">Unidade de Medida *</label>
                 <input style="width: 100%;" type="text" pInputText name="medida" ngModel #medida="ngModel" required />
                 <app-message [control]="medida" error="required" text="Campo obrigatório."></app-message>
             </div>
@@ -61,8 +61,8 @@
             </div>
             
             <div class="ui-g-2">
-                <label style="display: block;">Status *</label>
-                <p-dropdown placeholder="Selecione" [options]="statuss" optionLabel="name"  name="status" ngModel #status="ngModel"></p-dropdown>
+                <label style="display: block;">Situação do Produto *</label>
+                <p-dropdown placeholder="Selecione" [options]="statuss" optionLabel="name"  name="status" [(ngModel)]="statusObj"></p-dropdown>
             </div>
 
             <div class="ui-g-12">
@@ -85,7 +85,8 @@
                 <button pButton routerLink="/produtos" style="left: 76%; width: 10%;" type="button" label="Cancelar" ></button>
                 
                 <button pButton routerLink="/produtos" style="left: 80%; width: 10%;" type="button" label="Salvar"
-                (click)="adicionar(descricaoProduto.value, valor.value, qtdEstoque.value, especieObj.idEspecie, medida.value, peso.value, nome.value)" ></button>
+                (click)="adicionar(nome.value, valor.value, categoriaObj.idCategoria, qtdEstoque.value, marcaObj.idMarca, 
+                medida.value, peso.value, especieObj.idEspecie, descricaoProduto.value)"></button>
             </div>
 
         </div>
